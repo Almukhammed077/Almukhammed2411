@@ -4,7 +4,7 @@ public class Students extends Person {
 
     public Students(String name, String surname, int age, boolean gender) {
         super(name, surname, age, gender);
-        this.studentID = (int) (Math.random() * 9000) + 1000; // Generate random ID between 1000-9999
+        this.studentID = (int) (Math.random() * 9000) + 1000; 
         this.grades = new ArrayList<>();
     }
 
@@ -25,4 +25,4 @@ public class Students extends Person {
         return super.toString() + " I am a student with ID " + studentID + ".";
     }
 }
-}
+
