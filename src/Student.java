@@ -1,51 +1,37 @@
-public class Student {
-    private int id;
-    private static int id_gen=1;
-    private String name;
-    private String surname;
-    private double gpa;
+import java.util.ArrayList;
+import java.util.List;
 
-    Student(){
-        id = id_gen++;
-    }
-    Student(int id, String name, String surname, double gpa) {
-        this();
-        setName(name);
-        setSurname(surname);
-        setGpa(gpa);
+public class Student extends Person {
+    private static int idCounter = 1;
+    private int studentID;
+    private List<Integer> grades;
+
+    public Student(String name, int age, String surname, boolean gender) {
+        super(name, age, surname, gender);
+        this.studentID = idCounter++;
+        this.grades = new ArrayList<>();
     }
 
-
-    public int getId() {
-        return id;
+    public void addGrade(int grade) {
+        if (grade >= 0 && grade <= 100) {
+            grades.add(grade);
+        } else {
+            System.out.println("Invalid grade. Must be between 0 and 100.");
+        }
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public double getGpa() {
-        return gpa;
-    }
-
-    public void setGpa(double gpa) {
-        this.gpa = gpa;
+    public double calculateGPA() {
+        if (grades.isEmpty()) return 0;
+        int sum = 0;
+        for (int grade : grades) {
+            sum += grade;
+        }
+        return sum / (double) grades.size();
     }
 
     @Override
     public String toString() {
-        return id + " " + name + " " + surname + " " + gpa;
+        return super.toString() + " I am a student with ID " + studentID + ".";
     }
 }
+

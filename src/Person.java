@@ -9,22 +9,27 @@ public class Person {
         this.surname = surname;
         this.gender = gender;    }
     public String getName() {
+
         return name;
     }
     public int getAge() {
+
         return age;
     }
     public String getSurname() {
         return surname;    }
     public boolean isGender() {
+
         return gender;
     }
     public void setName(String name) {
+
         this.name = name;
     }
     public void setAge(int age) {
         this.age = age;    }
     public void setSurname(String surname) {
+
         this.surname = surname;
     }
     public void setGender(boolean gender) {
