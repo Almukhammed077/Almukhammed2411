@@ -44,10 +44,9 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         try {
-            //List<Student> students = FileParser.parseStudents("students.txt");
-            //List<Teacher> teachers = FileParser.parseTeachers("teachers.txt");
-            List<Student> students = FileParser.parseStudents("C:\\Users\\Almuhammed\\Desktop/students.txt");
-            List<Student> teachers = FileParser.parseStudents("C:\\Users\\Almuhammed\\Desktop/teachers.txt");
+            List<Student> students = FileParser.parseStudents("students.txt");
+            List<Teacher> teachers = FileParser.parseTeachers("teachers.txt");
+
             School school = new School();
 
             for (Student student : students) {
