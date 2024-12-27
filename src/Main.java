@@ -1,10 +1,10 @@
-/*public class Main {
+  /*public class Main {
     public static void main(String[] args){
-    Person person = new Person("Amantay", 18, "Almukhammed", true);
+    Person person = new Person("Almukhammed", 18, "Amantay", true);
         System.out.println(person);
     }
 }*/
-/*public class Main {
+    /* public class Main {
     public static void main(String[] args) {
         Student student = new Student("Alida", 18, "Mirmagalieva", false);
         student.addGrade(85);
@@ -14,7 +14,7 @@
         System.out.println("GPA: " + student.calculateGPA());
         Teacher teacher = new Teacher("Saken", 45, "Birgeldi", true, "Mathematics", 20, 50000);
         System.out.println(teacher);
-        teacher.giveRaise(10);
+        teacher.giveRais
         System.out.println("New Salary: " + teacher.getSalary());
     }
 }*/
